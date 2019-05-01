@@ -286,3 +286,4 @@ class LinkedList:
         current_node.next = self.head
         prev_node.next = None
         self.head = current_node
+        
