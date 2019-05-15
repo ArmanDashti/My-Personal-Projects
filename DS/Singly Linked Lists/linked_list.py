@@ -287,3 +287,18 @@ class LinkedList:
         prev_node.next = None
         self.head = current_node
         
+    def sum_two_lists(self, first_list, second_list):
+        lfl = first_list.len_iterative()
+        lsl = second_list.len_iterative()
+        first_list = first_list.head
+        second_list = second_list.head
+        first_value = 0
+        second_value = 0
+        for i in range(lfl):
+            first_value += first_list.data * ( 10 ** (lfl - i - 1))
+            first_list = first_list.next
+        for i in range(lsl):
+            second_value += second_list.data * ( 10 ** (lsl - i - 1))
+            second_list = second_list.next
+        
+        return first_value + second_value
